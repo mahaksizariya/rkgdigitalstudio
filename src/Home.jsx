@@ -8,6 +8,7 @@ import {
   Globe,
   Instagram,
   Menu,
+  Phone,
   Megaphone,
   Music2,
   Play,
@@ -166,20 +167,20 @@ function Navbar() {
   ];
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white/90 backdrop-blur-xl">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-black/15 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-3" aria-label="RKG Digital home">
           <img
             src={logoImage}
             alt="RKG Digital logo"
-            className="h-9 w-9 rounded-lg object-cover ring-1 ring-black/10"
+            className="h-9 w-9 rounded-lg object-cover ring-1 ring-white/15"
           />
 
           <div>
-            <p className="text-lg font-black tracking-tight text-black">
+            <p className="text-lg font-black tracking-tight text-white">
               RKG <span className="text-red-500">DIGITAL</span>
             </p>
-            <p className="text-[9px] uppercase tracking-[0.28em] text-black/50">
+            <p className="text-[9px] uppercase tracking-[0.28em] text-white/65">
               Marketing Agency
             </p>
           </div>
@@ -190,7 +191,7 @@ function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-black/70 transition hover:text-red-500"
+              className="text-sm font-medium text-white/75 transition hover:text-orange-400"
             >
               {item.name}
             </a>
@@ -202,7 +203,7 @@ function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/[0.03] text-black transition hover:border-red-500/40 hover:text-red-500"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:border-orange-400/70 hover:text-orange-400"
             >
               <Instagram size={16} />
             </a>
@@ -220,7 +221,7 @@ function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="rounded-xl border border-black/10 p-2 text-black md:hidden"
+          className="rounded-xl border border-white/15 p-2 text-white md:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -228,14 +229,14 @@ function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-black/10 bg-white px-6 py-6 md:hidden">
+        <div className="border-t border-white/10 bg-black/90 px-6 py-6 md:hidden">
           <div className="flex flex-col gap-5">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-sm font-medium text-black/70"
+                className="text-sm font-medium text-white/75"
               >
                 {item.name}
               </a>
@@ -246,7 +247,7 @@ function Navbar() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full border border-black/10 bg-black/[0.03] px-5 py-3 text-sm font-bold text-black"
+                className="flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-bold text-white"
               >
                 <Instagram size={17} />
                 Instagram
@@ -270,30 +271,30 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#090909] pt-24 text-white">
+    <section id="home" className="relative overflow-hidden bg-[#111111] pt-24 text-white">
       <div
-        className="hero-animated-bg absolute inset-0 opacity-200"
+        className="hero-animated-bg absolute inset-0 opacity-80"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')",
         }}
       />
-      <div className="hero-glow absolute left-[-12%] top-[12%] h-[420px] w-[420px] rounded-full bg-red-600/20 blur-[150px]" />
-      <div className="hero-glow absolute bottom-[-10%] right-[-8%] h-[420px] w-[420px] rounded-full bg-orange-500/10 blur-[140px]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#090909] via-[#090909]/90 to-[#090909]/80" />
+      <div className="hero-glow absolute left-[-10%] top-[8%] h-[440px] w-[440px] rounded-full bg-orange-500/15 blur-[160px]" />
+      <div className="hero-glow absolute bottom-[-8%] right-[-12%] h-[420px] w-[420px] rounded-full bg-red-600/15 blur-[170px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/90 to-[#111111]/75" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:pt-20">
         <div>
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-red-300">
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-orange-300">
             <Sparkles size={13} />
             Digital Marketing Agency
           </div>
 
-          <h1 className="max-w-5xl text-5xl font-black leading-[0.88] tracking-[-0.06em] sm:text-6xl lg:text-[6rem]">
+          <h1 className="max-w-5xl text-5xl font-black leading-[0.88] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5.6rem]">
             A LEADING
-            <span className="block text-red-500">DIGITAL MARKETING</span>
-            AGENCY 
-            <span className="block text-white/75">FOR COMPLETE BRAND GROWTH</span>
+            <span className="block text-orange-400">DIGITAL MARKETING</span>
+            AGENCY
+            <span className="mt-2 block text-white/75">FOR COMPLETE BRAND GROWTH</span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
@@ -305,7 +306,7 @@ function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white transition hover:bg-red-500"
+              className="group inline-flex items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-4 text-sm font-bold text-black transition hover:bg-orange-400"
             >
               GET A QUOTE
               <ArrowUpRight
@@ -323,25 +324,25 @@ function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/50">
+          <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/55">
             <div className="flex items-center gap-2">
-              <CheckCircle2 size={17} className="text-red-500" />
+              <CheckCircle2 size={17} className="text-orange-400" />
               Creative Strategy
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 size={17} className="text-red-500" />
+              <CheckCircle2 size={17} className="text-orange-400" />
               Social Growth
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 size={17} className="text-red-500" />
+              <CheckCircle2 size={17} className="text-orange-400" />
               Digital Execution
             </div>
           </div>
         </div>
 
         <div className="relative">
-          <div className="absolute inset-6 rounded-[2.5rem] bg-red-500/10 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.02] p-3 shadow-[0_40px_120px_rgba(0,0,0,0.55)]">
+          <div className="absolute inset-6 rounded-[2.5rem] bg-orange-500/10 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.04] p-3 shadow-[0_40px_120px_rgba(0,0,0,0.55)]">
             <div className="relative overflow-hidden rounded-[1.9rem]">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
@@ -356,12 +357,12 @@ function Hero() {
                     <p className="text-[10px] uppercase tracking-[0.25em] text-white/45">
                       RKG Digital
                     </p>
-                    <p className="mt-2 text-2xl font-black leading-tight">
+                    <p className="mt-2 text-2xl font-black leading-tight text-white">
                       Create.<br />Promote.<br />Grow.
                     </p>
                   </div>
 
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-500 text-black">
                     <Play size={20} fill="currentColor" />
                   </div>
                 </div>
@@ -376,12 +377,12 @@ function Hero() {
 
 function Stats() {
   return (
-    <section className="border-y border-white/10 bg-white/[0.02]">
+    <section className="border-y border-black/5 bg-[#f3f3f1]">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-0 lg:grid-cols-4">
         {stats.map((stat) => (
-          <div key={stat.label} className="border-r border-white/10 px-6 py-10 last:border-r-0">
-            <p className="text-4xl font-black tracking-[-0.04em]">{stat.value}</p>
-            <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-white/40">{stat.label}</p>
+          <div key={stat.label} className="border-r border-black/5 px-6 py-10 last:border-r-0">
+            <p className="text-4xl font-black tracking-[-0.04em] text-black">{stat.value}</p>
+            <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-black/45">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -391,17 +392,17 @@ function Stats() {
 
 function Services() {
   return (
-    <section id="services" className="bg-[#090909] py-28">
+    <section id="services" className="bg-[#f3f3f1] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-red-400">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-500">
             Services
           </p>
-          <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
+          <h2 className="text-4xl font-black tracking-[-0.05em] text-black md:text-6xl">
             SERVICES FROM A FULL-SERVICE
-            <span className="block text-red-500">DIGITAL MARKETING AGENCY</span>
+            <span className="block text-orange-500">DIGITAL MARKETING AGENCY</span>
           </h2>
-          <p className="mt-6 text-lg leading-8 text-white/55">
+          <p className="mt-6 text-lg leading-8 text-black/60">
             Everything a brand needs to be seen, planned, made and shipped by the same team — so nothing gets lost between agencies.
           </p>
         </div>
@@ -412,19 +413,19 @@ function Services() {
             return (
               <div
                 key={service.number}
-                className="group rounded-[1.75rem] border border-white/10 bg-[#121212] p-7 transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:bg-[#151515]"
+                className="group rounded-[1.75rem] border border-black/5 bg-white p-7 shadow-[0_14px_40px_rgba(0,0,0,0.04)] transition duration-300 hover:-translate-y-1 hover:border-orange-500/30"
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-red-400 transition group-hover:border-red-500/30 group-hover:bg-red-500/10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/5 bg-orange-500/10 text-orange-500 transition group-hover:bg-orange-500/15">
                     <Icon size={22} />
                   </div>
-                  <span className="text-xs font-bold text-white/20">{service.number}</span>
+                  <span className="text-xs font-bold text-black/25">{service.number}</span>
                 </div>
 
-                <h3 className="mt-8 text-2xl font-black tracking-[-0.04em]">{service.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white/45">{service.description}</p>
+                <h3 className="mt-8 text-2xl font-black tracking-[-0.04em] text-black">{service.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-black/60">{service.description}</p>
 
-                <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-red-400">
+                <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-orange-500">
                   Explore Service
                   <ArrowUpRight size={15} />
                 </div>
@@ -509,26 +510,35 @@ function MusicSection() {
 
 function WorkProcess() {
   return (
-    <section id="work" className="border-t border-white/10 bg-white/[0.02] py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-red-400">
+    <section id="work" className="border-t border-black/5 bg-[#2d2b2a] py-28 text-white">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div className="max-w-xl">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-400">
             How We Work
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
             FROM A PLAN,
-            <span className="block text-red-500">TO A BRAND JOURNEY.</span>
+            <span className="block text-orange-400">TO A BRAND JOURNEY.</span>
           </h2>
+          <p className="mt-6 text-base leading-8 text-white/65">
+            We study your audience, shape the positioning and build a scalable strategy that turns attention into measurable growth.
+          </p>
+
+          <a
+            href="#contact"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 text-sm font-bold text-black transition hover:bg-orange-400"
+          >
+            <Phone size={16} />
+            CONTACT US FOR MORE INFO
+          </a>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
-          {workSteps.map((step) => (
-            <div key={step.phase} className="rounded-[1.8rem] border border-white/10 bg-[#111111] p-6">
-              <p className="text-[10px] uppercase tracking-[0.26em] text-red-400">{step.phase}</p>
-              <h3 className="mt-5 text-2xl font-black leading-tight tracking-[-0.04em]">{step.title}</h3>
-              <p className="mt-4 text-base leading-7 text-white/55">{step.text}</p>
-            </div>
-          ))}
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3">
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+            alt="Analytics and digital growth planning"
+            className="h-[420px] w-full rounded-[1.5rem] object-cover"
+          />
         </div>
       </div>
     </section>
@@ -537,41 +547,31 @@ function WorkProcess() {
 
 function Showcase() {
   return (
-    <section className="bg-black py-28">
+    <section className="bg-[#f3f3f1] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-red-400">
-              Creative Showcase
-            </p>
-            <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
-              IDEAS THAT
-              <span className="block text-red-500">STOP THE SCROLL</span>
-            </h2>
-          </div>
-
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-bold text-white transition hover:border-red-500/40 hover:text-red-400"
-          >
-            VIEW PORTFOLIO
-            <ArrowUpRight size={16} />
-          </a>
+        <div className="mb-12 text-center">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-orange-500">
+            Creative Showcase
+          </p>
+          <h2 className="text-4xl font-black tracking-[-0.05em] text-black md:text-6xl">
+            IDEAS THAT
+            <span className="block text-orange-500">STOP THE SCROLL</span>
+          </h2>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
           {portfolio.map((item) => (
-            <article key={item.title} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111]">
-              <div className="overflow-hidden">
+            <article key={item.title} className="group overflow-hidden rounded-[2rem] border border-black/5 bg-white p-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)]">
+              <div className="overflow-hidden rounded-[1.5rem]">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-[380px] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-6">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-red-400">{item.label}</p>
-                <h3 className="mt-4 text-2xl font-black leading-tight tracking-[-0.04em]">{item.title}</h3>
+              <div className="p-4">
+                <p className="text-[10px] uppercase tracking-[0.25em] text-orange-500">{item.label}</p>
+                <h3 className="mt-4 text-2xl font-black leading-tight tracking-[-0.04em] text-black">{item.title}</h3>
               </div>
             </article>
           ))}
