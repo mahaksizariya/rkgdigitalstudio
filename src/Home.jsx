@@ -22,6 +22,23 @@ import {
 const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@RkgDigitalMarketingAgency-w1c";
 const INSTAGRAM_URL = "https://www.instagram.com/rkgdigital1/";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RKG Digital",
+  url: "https://rkgdigital.com/",
+  description:
+    "Creative digital marketing agency offering SEO, social media marketing, branding, content, and music promotion services.",
+  sameAs: [INSTAGRAM_URL, YOUTUBE_CHANNEL_URL],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    telephone: "+91-7566920256",
+    areaServed: "IN",
+    availableLanguage: ["English", "Hindi"],
+  },
+};
+
 const services = [
   {
     number: "01",
@@ -694,6 +711,11 @@ export default function Home() {
           social media, SEO, content creation, music promotion and digital growth strategy.
         </p>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
 
       <Navbar />
       <Hero />
