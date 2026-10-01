@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@keyframes floatBg {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    filter: brightness(0.7) saturate(0.9);
+  }
+  50% {
+    transform: scale(1.08) translate3d(0, -10px, 0);
+    filter: brightness(0.85) saturate(1.1);
+  }
+  100% {
+    transform: scale(1.12) translate3d(0, 8px, 0);
+    filter: brightness(0.8) saturate(1);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.04);
+  }
+}
+
+.hero-animated-bg {
+  animation: floatBg 18s ease-in-out infinite alternate;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-glow {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090909;
+}
