@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import logoImage from "./assets/ChatGPT Image Oct 2, 2026, 01_21_54 AM.png";
+import founderImage from "./assets/founder.png";
+import upcomingImage from "./assets/upcoming.png";
+import workImage from "./assets/7.png";
+import heroImage from "./assets/6.png";
+import portfolio1 from "./assets/1.png";
+import portfolio2 from "./assets/2.png";
+import portfolio4 from "./assets/4.png";
 import {
   ArrowUpRight,
   BarChart3,
@@ -44,44 +51,44 @@ const services = [
   {
     number: "01",
     icon: TrendingUp,
-    title: "Social Media Marketing",
+    title: "YouTube Ads",
     description:
-      "Campaigns, short-form creatives and audience-driven growth strategies built to turn attention into real results.",
+      "Targeted skip ads designed to reach active listeners, expand reach and bring real views to your songs and campaigns.",
   },
   {
     number: "02",
     icon: Search,
-    title: "SEO & Content",
+    title: "Instagram Reels",
     description:
-      "Search-friendly content, keyword strategy and optimization designed to boost visibility and attract quality traffic.",
+      "Short-form, high-impact promotion for music, artist pages and launches that help content spread organically with intent.",
   },
   {
     number: "03",
     icon: Megaphone,
-    title: "Brand Promotion",
+    title: "Influencer Marketing",
     description:
-      "High-impact promotion campaigns that increase awareness, engagement and brand recall across digital channels.",
+      "Audience-first visibility through music creators, niche influencers and digital communities that match your genre and fanbase.",
   },
   {
     number: "04",
     icon: Music2,
     title: "Music Promotion",
     description:
-      "Artist and release promotion built around social visibility, audience reach and fan engagement.",
+      "Full promotional coverage for releases, artist growth, song visibility and digital traction across key music channels.",
   },
   {
     number: "05",
     icon: Camera,
-    title: "Content Creation",
+    title: "Content Strategy",
     description:
-      "Reels, creative production and digital storytelling crafted for modern brands and audiences.",
+      "Creative assets, campaign hooks and monthly production systems tailored to push more plays, engagement and brand recall.",
   },
   {
     number: "06",
     icon: BarChart3,
-    title: "Performance Marketing",
+    title: "Campaign Reporting",
     description:
-      "Strategic digital funnels, paid media and analytics that help brands scale through measurable growth.",
+      "Transparent performance insights with fast delivery, clear metrics and campaign growth that keeps your next release sharper.",
   },
 ];
 
@@ -126,20 +133,17 @@ const portfolio = [
   {
     label: "Brand & Creative",
     title: "Launch Campaigns That Feel Premium",
-    image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    image: portfolio1,
   },
   {
     label: "Digital & Web",
     title: "High-Impact Stories for Modern Audiences",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    image: portfolio2,
   },
   {
     label: "Social & Campaign",
     title: "Creative Direction that Drives Action",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    image: portfolio4,
   },
 ];
 
@@ -269,6 +273,43 @@ function Navbar() {
   );
 }
 
+function FounderSpotlight() {
+  return (
+    <section id="about" className="relative overflow-hidden bg-[#111111] pt-28 pb-6 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(239,68,68,0.12),_transparent_28%)]" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid items-center gap-8 rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
+          <div>
+         
+            <h2 className="mt-4 text-3xl font-black tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
+              Marketing that moves
+              <span className="block text-orange-400">people and grows brands.</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-base leading-8 text-white/65">
+              We turn attention into action with strategy, content, branding and digital campaigns built to create momentum and measurable growth.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute inset-4 rounded-full bg-orange-500/15 blur-2xl" />
+              <img
+                src={founderImage}
+                alt="Mayank Gupta"
+                className="relative h-[260px] w-[260px] rounded-[2rem] border border-white/10 object-cover shadow-[0_18px_40px_rgba(0,0,0,0.28)] lg:h-[300px] lg:w-[300px]"
+              />
+            </div>
+            <p className="mt-4 text-center text-base font-bold uppercase tracking-[0.2em] text-white/85 sm:text-lg">
+              Founder & CEO<br />Mayank Gupta
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-[#111111] pt-24 text-white">
@@ -290,11 +331,10 @@ function Hero() {
             Digital Marketing Agency
           </div>
 
-          <h1 className="max-w-5xl text-5xl font-black leading-[0.88] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5.6rem]">
-            A LEADING
-            <span className="block text-orange-400">DIGITAL MARKETING</span>
-            AGENCY
-            <span className="mt-2 block text-white/75">FOR COMPLETE BRAND GROWTH</span>
+          <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5rem]">
+            CREATE.
+            <span className="block text-orange-400">PROMOTE.</span>
+            <span className="block text-white/90">GROW.</span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
@@ -345,7 +385,7 @@ function Hero() {
           <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/[0.04] p-3 shadow-[0_40px_120px_rgba(0,0,0,0.55)]">
             <div className="relative overflow-hidden rounded-[1.9rem]">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+                src={heroImage}
                 alt="RKG Digital team planning campaign"
                 className="aspect-[4/5] w-full object-cover"
               />
@@ -377,10 +417,13 @@ function Hero() {
 
 function Stats() {
   return (
-    <section className="border-y border-black/5 bg-[#f3f3f1]">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-0 lg:grid-cols-4">
+    <section className="border-y border-black/5 bg-[#f3f3f1] py-2">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 px-6 lg:grid-cols-4 lg:px-8">
         {stats.map((stat) => (
-          <div key={stat.label} className="border-r border-black/5 px-6 py-10 last:border-r-0">
+          <div
+            key={stat.label}
+            className="rounded-[1.5rem] border border-black/5 bg-white px-6 py-8 text-center shadow-[0_12px_30px_rgba(0,0,0,0.02)]"
+          >
             <p className="text-4xl font-black tracking-[-0.04em] text-black">{stat.value}</p>
             <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-black/45">{stat.label}</p>
           </div>
@@ -444,24 +487,24 @@ function MusicSection() {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
         <div className="order-2 lg:order-1">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-400">
-            Music & Entertainment
+            Music Promotion
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
-            TURN YOUR MUSIC INTO
-            <span className="block text-orange-400">A MOVEMENT.</span>
+            PROMOTE YOUR MUSIC
+            <span className="block text-orange-400">REACH MILLIONS.</span>
           </h2>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
-            We help artists, music labels and creators build digital momentum through
-            promotional campaigns, reels, content strategy and brand visibility that reaches the right audience.
+            We help artists, labels and creators scale visibility through YouTube promotion,
+            audience targeting, brand storytelling and results-driven campaigns built for real growth.
           </p>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2">
             {[
-              "Artist Promotion",
-              "Music Release Campaigns",
-              "Reels & Shorts",
-              "Social Media Promotion",
+              "Targeted Audience",
+              "Safe & Secure Campaigns",
+              "Fast Delivery",
+              "Better Results",
             ].map((item) => (
               <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                 <CheckCircle2 size={18} className="text-orange-400" />
@@ -485,21 +528,10 @@ function MusicSection() {
           <div className="relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/[0.02] p-3 shadow-[0_30px_80px_rgba(0,0,0,0.45)]">
             <div className="relative overflow-hidden rounded-[1.8rem]">
               <img
-                src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
+                src={upcomingImage}
                 alt="Music promotion artwork"
-                className="aspect-square w-full object-cover"
+                className="h-[560px] w-full object-cover md:h-[700px]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/15 to-transparent" />
-
-              <div className="absolute bottom-6 left-6 right-6 flex items-center gap-4 rounded-2xl border border-white/10 bg-black/70 p-4 backdrop-blur-md">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-black">
-                  <Music2 size={22} />
-                </div>
-                <div>
-                  <p className="text-sm font-bold">Music Promotion</p>
-                  <p className="text-xs text-white/50">RKG Digital</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -533,11 +565,11 @@ function WorkProcess() {
           </a>
         </div>
 
-        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3">
+        <div className="flex justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+            src={workImage}
             alt="Analytics and digital growth planning"
-            className="h-[420px] w-full rounded-[1.5rem] object-cover"
+            className="h-[520px] w-full max-w-[100%] rounded-[1.5rem] object-cover md:h-[720px]"
           />
         </div>
       </div>
@@ -693,8 +725,22 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/35">
-          © {new Date().getFullYear()} RKG Digital. All rights reserved.
+        <div className="mt-10 flex flex-col gap-5 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-4">
+            <img
+              src={founderImage}
+              alt="Mayank Gupta"
+              className="h-14 w-14 rounded-full border border-white/10 object-cover"
+            />
+            <div>
+              <p className="text-sm font-bold text-white">Mayank Gupta</p>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-white/35">Founder</p>
+            </div>
+          </div>
+
+          <div className="text-xs text-white/35">
+            © {new Date().getFullYear()} RKG Digital. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
@@ -718,6 +764,7 @@ export default function Home() {
       />
 
       <Navbar />
+      <FounderSpotlight />
       <Hero />
       <Stats />
       <Services />

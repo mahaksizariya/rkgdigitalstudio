@@ -38,9 +38,11 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 body {
   background: #efefef;
   color: #111111;
+  font-family: Verdana, Geneva, sans-serif;
 }
