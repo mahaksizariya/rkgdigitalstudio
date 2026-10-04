@@ -7,9 +7,14 @@ import heroImage from "./assets/6.png";
 import portfolio1 from "./assets/1.png";
 import portfolio2 from "./assets/2.png";
 import portfolio4 from "./assets/4.png";
+import bajaoGaanaLogo from "./assets/Bajao_Gaana_Studios_logo.png";
+import raagaRecordsLogo from "./assets/Raaga_Records_logo.png";
+import redMusicLogo from "./assets/Red_Music_logo.png";
+import sareGaMaLogo from "./assets/Sare_Ga_Ma_logo.png";
+import vighnahartaLogo from "./assets/Vighnaharta_Movies_logo.png";
+import vividnetLogo from "./assets/Vividnet_Music_logo.png";
 import {
   ArrowUpRight,
-  BarChart3,
   Camera,
   CheckCircle2,
   Globe,
@@ -19,8 +24,6 @@ import {
   Megaphone,
   Music2,
   Play,
-  Search,
-  Smartphone,
   Sparkles,
   TrendingUp,
   X,
@@ -36,7 +39,7 @@ const organizationSchema = {
   name: "RKG Digital",
   url: "https://rkgdigital.com/",
   description:
-    "Creative digital marketing agency offering SEO, social media marketing, branding, content, and music promotion services.",
+    "Music, entertainment, and digital marketing agency offering music promotion, YouTube advertising, influencer marketing, and digital campaigns.",
   sameAs: [INSTAGRAM_URL, YOUTUBE_CHANNEL_URL],
   contactPoint: {
     "@type": "ContactPoint",
@@ -53,50 +56,50 @@ const services = [
     icon: TrendingUp,
     title: "YouTube Ads",
     description:
-      "Targeted skip ads designed to reach active listeners, expand reach and bring real views to your songs and campaigns.",
+      "Audience-focused YouTube campaigns that help music releases reach listeners across relevant markets.",
   },
   {
     number: "02",
-    icon: Search,
-    title: "Instagram Reels",
-    description:
-      "Short-form, high-impact promotion for music, artist pages and launches that help content spread organically with intent.",
-  },
-  {
-    number: "03",
     icon: Megaphone,
     title: "Influencer Marketing",
     description:
-      "Audience-first visibility through music creators, niche influencers and digital communities that match your genre and fanbase.",
+      "Creator-led campaigns shaped around your genre, audience, and release goals.",
+  },
+  {
+    number: "03",
+    icon: Music2,
+    title: "Music Promotion",
+    description:
+      "Release-focused promotion for artists, labels, and music projects across relevant digital channels.",
   },
   {
     number: "04",
     icon: Music2,
-    title: "Music Promotion",
+    title: "Spotify Promotion",
     description:
-      "Full promotional coverage for releases, artist growth, song visibility and digital traction across key music channels.",
+      "Digital promotion designed to support music discovery and release visibility on Spotify.",
   },
   {
     number: "05",
     icon: Camera,
-    title: "Content Strategy",
+    title: "Movie & Entertainment Promotion",
     description:
-      "Creative assets, campaign hooks and monthly production systems tailored to push more plays, engagement and brand recall.",
+      "Digital campaign support for film, entertainment, and production-house releases.",
   },
   {
     number: "06",
-    icon: BarChart3,
-    title: "Campaign Reporting",
+    icon: Globe,
+    title: "Digital PR & Campaigns",
     description:
-      "Transparent performance insights with fast delivery, clear metrics and campaign growth that keeps your next release sharper.",
+      "Coordinated digital campaigns that bring creative, platforms, and audience outreach together.",
   },
 ];
 
 const stats = [
-  { value: "360°", label: "Digital Growth" },
-  { value: "24/7", label: "Creative Energy" },
-  { value: "100%", label: "Audience Focus" },
-  { value: "∞", label: "Brand Ideas" },
+  { value: "Music", label: "Entertainment Marketing" },
+  { value: "Artists", label: "Labels & Creators" },
+  { value: "Global", label: "Audience Targeting" },
+  { value: "Digital", label: "Multi-Platform Campaigns" },
 ];
 
 const reasons = [
@@ -148,16 +151,12 @@ const portfolio = [
 ];
 
 const clients = [
-  "Jubilant",
-  "Tata Power",
-  "Volkswagen",
-  "Mapsko",
-  "Amrit Cement",
-  "Surya Roshni",
-  "Daiwa",
-  "Momo King",
-  "Skoda",
-  "Madhav KRG",
+  { name: "Bajao Gaana Studios", image: bajaoGaanaLogo },
+  { name: "Raaga Records", image: raagaRecordsLogo },
+  { name: "Red Music", image: redMusicLogo },
+  { name: "Saregama", image: sareGaMaLogo },
+  { name: "Vighnaharta Movies", image: vighnahartaLogo },
+  { name: "Vividnet Music", image: vividnetLogo },
 ];
 
 function Navbar() {
@@ -281,13 +280,12 @@ function FounderSpotlight() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-8 rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
           <div>
-         
             <h2 className="mt-4 text-3xl font-black tracking-[-0.05em] text-white sm:text-4xl lg:text-5xl">
-              Marketing that moves
-              <span className="block text-orange-400">people and grows brands.</span>
+              WE MAKE MUSIC MOVE.
+              <span className="block text-orange-400">WE MAKE BRANDS GROW.</span>
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-white/65">
-              We turn attention into action with strategy, content, branding and digital campaigns built to create momentum and measurable growth.
+              Music promotion, YouTube advertising, influencer marketing, and digital campaigns for artists, labels, and brands — across India and worldwide.
             </p>
           </div>
 
@@ -328,7 +326,7 @@ function Hero() {
         <div>
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-orange-300">
             <Sparkles size={13} />
-            Digital Marketing Agency
+            Music • Entertainment • Digital Marketing
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-[0.9] tracking-[-0.06em] text-white sm:text-6xl lg:text-[5rem]">
@@ -338,9 +336,8 @@ function Hero() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60">
-            We build brands that mean something, digital experiences that move people,
-            and campaigns that actually perform. From strategy to creative to growth,
-            we stay close to your business until it lands.
+            We help artists, labels, and entertainment brands promote releases through
+            YouTube advertising, influencer marketing, and digital campaigns.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -348,7 +345,7 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-4 text-sm font-bold text-black transition hover:bg-orange-400"
             >
-              GET A QUOTE
+              CONTACT US
               <ArrowUpRight
                 size={18}
                 className="transition group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -356,7 +353,7 @@ function Hero() {
             </a>
 
             <a
-              href="#work"
+              href="#showcase"
               className="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/3 px-7 py-4 text-sm font-bold text-white transition hover:border-white/30 hover:bg-white/5"
             >
               <Play size={18} fill="currentColor" />
@@ -367,15 +364,15 @@ function Hero() {
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/55">
             <div className="flex items-center gap-2">
               <CheckCircle2 size={17} className="text-orange-400" />
-              Creative Strategy
+              YouTube Ads
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={17} className="text-orange-400" />
-              Social Growth
+              Influencer Campaigns
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={17} className="text-orange-400" />
-              Digital Execution
+              India + Worldwide
             </div>
           </div>
         </div>
@@ -442,11 +439,12 @@ function Services() {
             Services
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] text-black md:text-6xl">
-            SERVICES FROM A FULL-SERVICE
-            <span className="block text-orange-500">DIGITAL MARKETING AGENCY</span>
+            MUSIC & ENTERTAINMENT
+            <span className="block text-orange-500">DIGITAL MARKETING</span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-black/60">
-            Everything a brand needs to be seen, planned, made and shipped by the same team — so nothing gets lost between agencies.
+            Music promotion, release campaigns, influencer outreach, and digital promotion
+            for artists, labels, and entertainment brands.
           </p>
         </div>
 
@@ -487,24 +485,24 @@ function MusicSection() {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
         <div className="order-2 lg:order-1">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-400">
-            Music Promotion
+            Featured Music Release
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
-            PROMOTE YOUR MUSIC
-            <span className="block text-orange-400">REACH MILLIONS.</span>
+            HAVE A RELEASE?
+            <span className="block text-orange-400">LET’S BUILD ITS CAMPAIGN.</span>
           </h2>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-white/60">
-            We help artists, labels and creators scale visibility through YouTube promotion,
-            audience targeting, brand storytelling and results-driven campaigns built for real growth.
+            From release planning to promotion across YouTube, Instagram, and creator
+            channels, we build campaigns around your music and audience.
           </p>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2">
             {[
-              "Targeted Audience",
-              "Safe & Secure Campaigns",
-              "Fast Delivery",
-              "Better Results",
+              "Release-Focused Strategy",
+              "YouTube & Instagram",
+              "Creator Campaigns",
+              "Audience-First Targeting",
             ].map((item) => (
               <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                 <CheckCircle2 size={18} className="text-orange-400" />
@@ -514,12 +512,10 @@ function MusicSection() {
           </div>
 
           <a
-            href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noreferrer"
+            href="#showcase"
             className="mt-9 inline-flex items-center gap-3 rounded-full bg-orange-500 px-7 py-4 text-sm font-bold text-black transition hover:bg-orange-400"
           >
-            WATCH MUSIC CONTENT
+            VIEW SELECTED WORK
             <ArrowUpRight size={18} />
           </a>
         </div>
@@ -529,7 +525,7 @@ function MusicSection() {
             <div className="relative overflow-hidden rounded-[1.8rem]">
               <img
                 src={upcomingImage}
-                alt="Music promotion artwork"
+                alt="Music release poster"
                 className="h-[560px] w-full object-cover md:h-[700px]"
               />
             </div>
@@ -549,11 +545,12 @@ function WorkProcess() {
             How We Work
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] md:text-6xl">
-            FROM A PLAN,
-            <span className="block text-orange-400">TO A BRAND JOURNEY.</span>
+            FROM RELEASE PLAN,
+            <span className="block text-orange-400">TO CAMPAIGN DELIVERY.</span>
           </h2>
           <p className="mt-6 text-base leading-8 text-white/65">
-            We study your audience, shape the positioning and build a scalable strategy that turns attention into measurable growth.
+            We plan around the release, audience, and campaign goals, then coordinate
+            creative and platform execution through launch.
           </p>
 
           <a
@@ -579,15 +576,15 @@ function WorkProcess() {
 
 function Showcase() {
   return (
-    <section className="bg-[#f3f3f1] py-28">
+    <section id="showcase" className="bg-[#f3f3f1] py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 text-center">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.3em] text-orange-500">
-            Creative Showcase
+            Selected Work
           </p>
           <h2 className="text-4xl font-black tracking-[-0.05em] text-black md:text-6xl">
-            IDEAS THAT
-            <span className="block text-orange-500">STOP THE SCROLL</span>
+            MUSIC, ENTERTAINMENT
+            <span className="block text-orange-500">& BRAND CAMPAIGNS</span>
           </h2>
         </div>
 
@@ -619,21 +616,27 @@ function Clients() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-red-400">
-            Our Precious Clients
+            Artists, Labels & Brands
           </p>
           <h2 className="mt-4 text-4xl font-black tracking-[-0.05em] md:text-6xl">
-            TRUSTED BY BRANDS THAT
-            <span className="block text-red-500">WANT TO GROW</span>
+            TRUSTED BY ARTISTS,
+            <span className="block text-red-500">LABELS & BRANDS</span>
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
           {clients.map((client) => (
-            <div
-              key={client}
-              className="flex items-center justify-center rounded-2xl border border-white/10 bg-[#111111] px-4 py-7 text-center text-sm font-bold uppercase tracking-[0.16em] text-white/45"
-            >
-              {client}
+            <div key={client.name} className="flex flex-col items-center gap-2">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full border border-white/10 bg-white p-3">
+                <img
+                  src={client.image}
+                  alt={client.name}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <p className="text-center text-[10px] font-semibold uppercase tracking-[0.15em] text-white/65">
+                {client.name}
+              </p>
             </div>
           ))}
         </div>
@@ -650,14 +653,14 @@ function CTA() {
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
         <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-white/75">
-          Let’s Work Together
+          HAVE A RELEASE COMING UP?
         </p>
         <h2 className="mt-5 text-4xl font-black tracking-[-0.05em] md:text-7xl">
-          BUILDING BRANDS.<br />CREATING IDEAS.<br />TRANSFORMING BUSINESSES.
+          LET’S BUILD A CAMPAIGN<br />THAT GETS YOUR MUSIC<br />HEARD.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
-          Let’s create something people remember. Talk to us about your next campaign,
-          promotion, branding or digital growth project.
+          Tell us about your next release and let’s plan a campaign for the audiences
+          you want to reach.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -697,7 +700,7 @@ function Footer() {
                 RKG <span className="text-red-500">DIGITAL</span>
               </p>
               <p className="text-[9px] uppercase tracking-[0.28em] text-white/35">
-                Digital Marketing Agency
+                Music • Entertainment • Digital Marketing
               </p>
             </div>
           </div>
@@ -751,10 +754,10 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-black text-white">
       <div className="sr-only">
-        <h1>RKG Digital Marketing Agency - growth, branding and digital campaigns</h1>
+        <h1>RKG Digital - Music, Entertainment and Digital Marketing</h1>
         <p>
-          RKG Digital is a creative digital marketing agency helping brands grow across
-          social media, SEO, content creation, music promotion and digital growth strategy.
+          RKG Digital helps artists, labels, and entertainment brands with music promotion,
+          YouTube advertising, influencer marketing, and digital campaigns.
         </p>
       </div>
 
@@ -766,9 +769,9 @@ export default function Home() {
       <Navbar />
       <FounderSpotlight />
       <Hero />
+      <MusicSection />
       <Stats />
       <Services />
-      <MusicSection />
       <WorkProcess />
       <Showcase />
       <Clients />
