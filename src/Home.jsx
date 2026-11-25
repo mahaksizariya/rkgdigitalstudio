@@ -4,9 +4,15 @@ import founderImage from "./assets/founder.png";
 import upcomingImage from "./assets/upcoming.png";
 import workImage from "./assets/7.png";
 import heroImage from "./assets/6.png";
-import portfolio1 from "./assets/1.png";
-import portfolio2 from "./assets/2.png";
-import portfolio4 from "./assets/4.png";
+import portfolio13 from "./assets/13.jpeg";
+import portfolio14 from "./assets/14.jpeg";
+import portfolio16 from "./assets/16.png";
+import portfolio19 from "./assets/19.png";
+import portfolio20 from "./assets/20.jpeg";
+import portfolio22 from "./assets/22.png";
+import portfolio24 from "./assets/24.png";
+import portfolio23 from "./assets/23.png";
+import portfolio26 from "./assets/26.png";
 import bajaoGaanaLogo from "./assets/Bajao_Gaana_Studios_logo.png";
 import raagaRecordsLogo from "./assets/Raaga_Records_logo.png";
 import redMusicLogo from "./assets/Red_Music_logo.png";
@@ -133,21 +139,15 @@ const workSteps = [
 ];
 
 const portfolio = [
-  {
-    label: "Brand & Creative",
-    title: "Launch Campaigns That Feel Premium",
-    image: portfolio1,
-  },
-  {
-    label: "Digital & Web",
-    title: "High-Impact Stories for Modern Audiences",
-    image: portfolio2,
-  },
-  {
-    label: "Social & Campaign",
-    title: "Creative Direction that Drives Action",
-    image: portfolio4,
-  },
+  { id: "13", image: portfolio13 },
+  { id: "14", image: portfolio14 },
+  { id: "16", image: portfolio16 },
+  { id: "19", image: portfolio19 },
+  { id: "20", image: portfolio20 },
+  { id: "22", image: portfolio22 },
+  { id: "24", image: portfolio24 },
+  { id: "23", image: portfolio23 },
+  { id: "26", image: portfolio26 },
 ];
 
 const clients = [
@@ -588,20 +588,14 @@ function Showcase() {
           </h2>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolio.map((item) => (
-            <article key={item.title} className="group overflow-hidden rounded-[2rem] border border-black/5 bg-white p-5 shadow-[0_14px_40px_rgba(0,0,0,0.04)]">
-              <div className="overflow-hidden rounded-[1.5rem]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="h-[380px] w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-orange-500">{item.label}</p>
-                <h3 className="mt-4 text-2xl font-black leading-tight tracking-[-0.04em] text-black">{item.title}</h3>
-              </div>
+            <article key={item.id} className="group overflow-hidden rounded-[1.5rem] border border-black/5 bg-white shadow-[0_14px_40px_rgba(0,0,0,0.08)]">
+              <img
+                src={item.image}
+                alt={`Music, entertainment, and brand campaign ${item.id}`}
+                className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
             </article>
           ))}
         </div>
@@ -742,6 +736,7 @@ function Footer() {
           </div>
 
           <div className="text-xs text-white/35">
+            <p>Gwalior, Madhya Pradesh</p>
             © {new Date().getFullYear()} RKG Digital. All rights reserved.
           </div>
         </div>
